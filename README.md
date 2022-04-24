@@ -1,3 +1,24 @@
+# Notes
+
+For building this UI, I opted for React and Material UI. I also decided to set up the React project manually (instead of using `create-react-app`) in order to gain some more familiarity with Webpack.
+
+Since it's such a small project, I decided against Redux or any other state management tools. 
+
+I also added a searchbar, which is implemented with a trie.
+
+
+A few outstanding issues:
+* Making a search will reset any sorting and restore any deleted albums. Since the search function is just a little extra anyway, I didn't prioritize it, but if I were going to fix the issue I would use some centralized state management to make updating the album list and search trie simpler.
+* The styling could be improved. It's a bit lackluster as it is, and the album covers aren't perfectly cropped.
+* Not suited for smaller screen sizes
+* The Tooltip component triggers a nasty deprecation error in the console. I wasn't able to find a satisfactory solution, but it doesn't affect the functionality at all.
+* The `webpack.dev.js` file should have an accompanying `webpack.prod.js` file for building for production.
+
+
+
+
+
+
 ## Music Library UI Assessment 🎵
 
 Given the albums.json, create a simple UI that can do the following
